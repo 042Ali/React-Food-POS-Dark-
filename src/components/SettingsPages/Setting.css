@@ -1,0 +1,21 @@
+.Setting__products {
+  background-color: #252836;
+  width: 1700px;
+  color: white;
+  /* margin-left: 200px; */
+}
+
+.settings-section {
+  padding: 24px 84px;
+  border: 1px solid #1f1d2b;
+  background-color: #1f1d2b;
+  height: 650px;
+  width: 300px;
+  margin-left: 50px;
+  margin-top: 10px;
+  border-radius: 12px;
+}
+
+p {
+  color: #abbbc2;
+}

@@ -1,0 +1,24 @@
+.sidebar {
+  background-color: #1f1f2e;
+  width: 100px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25px;
+}
+
+.sidebar-icon {
+  color: #ff7d7d;
+  font-size: 24px;
+  margin: 31px 0;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.sidebar-icon.active {
+  background-color: #ff7d7d;
+  padding: 10px;
+  border-radius: 10px;
+  color: #ffffff;
+}

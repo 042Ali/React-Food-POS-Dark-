@@ -1,50 +1,24 @@
-import { FiHome } from "react-icons/fi";
+import { useState } from "react";
 import Menu from "./components/Menu/Menu";
+import Sidebar from "./components/Sidebar/Sidebar";
+import Settings from "./components/SettingsPages/Settings";
+import Dashboard from "./components/DashboardPages/Dashboard";
 
 export default function App() {
-  // const [activePage, setActivePage] = useState("home");
-
-  // const renderPage = () => {
-  //   if (activePage === "home") {
-  //     return <Home />;
-  //   } else if (activePage === "") {
-  //     return <About />;
-  //   } else if (activePage === "contact") {
-  //     return <Contact />;
-  //   } else {
-  //     return <Home />;
-  //   }
-  // };
+  const [page, setPage] = useState("Menu");
 
   return (
-    <div className="App">
-      <div className="sidebar">
-        <div style={{ marginTop: "-10px" }} className="sidebar-icon">
-          <img src="./Logo (2).png" />
-        </div>
-        <div className="sidebar-icon active">
-          <FiHome />
-        </div>
-        <div className="sidebar-icon">
-          <img src="./Discount.png" />
-        </div>
-        <div className="sidebar-icon">
-          <img src="./Graph.png" />
-        </div>
-        <div className="sidebar-icon">
-          <img src="./Message.png" />
-        </div>
-        <div className="sidebar-icon">
-          <img src="./Notification.png" />
-        </div>
-        <div className="sidebar-icon">
-          <img src="./Setting.png" />
-        </div>
-        <div style={{ marginTop: "50px" }} className="sidebar-icon">
-          <img src="./Log Out.png" />
-        </div>
-      </div>
-      <Menu />
+    <div style={{ display: "flex" }} className="App">
+      <Sidebar page={page} setPage={setPage} />
+      {page === "Menu" ? (
+        <Menu />
+      ) : page === "settings" ? (
+        <Settings />
+      ) : page === "Dashboard" ? (
+        <Dashboard />
+      ) : (
+        "Something went wrong"
+      )}
     </div>
   );
 }
