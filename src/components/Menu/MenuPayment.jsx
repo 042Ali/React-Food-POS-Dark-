@@ -1,7 +1,15 @@
 import { Button } from "@mui/material";
 import MenuButton from "../MenuButton/MenuButton";
+import { useStore } from "../../useStore";
 
 export default function MenuPayment() {
+  const selectedProducts = useStore((state) => state.selectedProducts);
+
+  let total = 0;
+  for (let i = 0; i < selectedProducts.length; i++) {
+    total += selectedProducts[i].price * selectedProducts[i].quantity;
+  }
+
   return (
     <>
       <div className="MenuPayment">
@@ -25,6 +33,7 @@ export default function MenuPayment() {
           >
             Dine In
           </Button>
+
           <Button
             style={{
               color: "#ea7c69",
@@ -50,6 +59,30 @@ export default function MenuPayment() {
             Delivery
           </Button>
         </div>
+        {selectedProducts.length > 0 && (
+          <div className="MenuPayment__Container">
+            <h2>Your Order</h2>
+            <div className="MenuPayment__Items">
+              {selectedProducts.map((product) => (
+                <div key={product.id} className="MenuPayment__Item">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="MenuPayment__Img"
+                  />
+                  <div>
+                    <p>{product.name}</p>
+                    <p>Quantity: {product.quantity}</p>
+                    <p>${product.price * product.quantity}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <hr />
+            <h3>Total: ${total}</h3>
+          </div>
+          // TODO
+        )}
         <MenuButton />
       </div>
     </>
