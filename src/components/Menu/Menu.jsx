@@ -11,7 +11,6 @@ export default function Menu() {
   const [products, setProducts] = useState([]);
   const [error, setError] = useState(null);
 
-  // Zustand's addProduct action to add items to the cart
   const addProduct = useStore((state) => state.addProduct);
 
   useEffect(() => {

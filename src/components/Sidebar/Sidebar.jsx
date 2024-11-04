@@ -11,6 +11,7 @@ export default function Sidebar({ page, setPage }) {
         className={`sidebar-icon ${page === "Menu" ? "active" : ""}`}
         onClick={() => setPage("Menu")}
       >
+        
         <FiHome />
       </div>
       <div className="sidebar-icon">
