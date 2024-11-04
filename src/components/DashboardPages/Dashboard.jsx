@@ -1,4 +1,7 @@
 import { FaArrowUp } from "react-icons/fa6";
+import OrderReport from "./Cardlar/OrderReport";
+import MostOrdered from "./Cardlar/MostOrdered";
+import MostTypeofOrder from "./Cardlar/MostTypeofOrder";
 import { IoMdArrowDown } from "react-icons/io";
 import "./Dashboard.css";
 
@@ -68,45 +71,9 @@ export default function Dashboard() {
           </div>
         </div>
         {/*  */}
-        <div className="Order__Report">
-          <h1>Order Report</h1>
-          <div className="Filter__Order__card">
-            <div className="Filter__Order">
-              <div>
-                <img src="./Filter.png" alt="" />
-              </div>
-              <h2>Filter Order</h2>
-            </div>
-          </div>
-          <ul>
-            <li>Customer</li>
-            <li>Menu</li>
-            <li>Total Payment</li>
-            <li>Status</li>
-          </ul>
-          <div className="newhr"></div>
-          <div className="Profile__Name">
-            <span>Eren Jaegar</span>
-            <span>Reiner Braunn</span>
-            <span>Levi Ackerman</span>
-            <span>Historia Reiss</span>
-          </div>
-
-          <div className="Avatar_Image">
-            <div>
-              <img className="Avatar__Profile" src="./AvatarImg/Avatar1.png" />
-            </div>
-            <div>
-              <img className="Avatar__Profile" src="./AvatarImg/Avatar2.png" />
-            </div>
-            <div>
-              <img className="Avatar__Profile" src="./AvatarImg/Avatar3.png" />
-            </div>
-            <div>
-              <img className="Avatar__Profile" src="./AvatarImg/Avatar4.png" />
-            </div>
-          </div>
-        </div>
+        <OrderReport />
+        <MostOrdered />
+        <MostTypeofOrder />
       </div>
     </>
   );

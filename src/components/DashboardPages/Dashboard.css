@@ -206,3 +206,155 @@
     margin-left: -140px;
   }
 }
+
+.Profile__Food {
+  margin-left: 260px;
+  margin-top: -300px;
+}
+
+.Profile__Food--Name {
+  margin-top: -100px;
+}
+
+.Profile__Food--Name1 {
+  margin-top: 70px;
+}
+.Profile__Food--Name2 {
+  margin-top: 40px;
+}
+
+.Profile__Food--Name3 {
+  margin-top: 40px;
+}
+
+.Profile__Food--Name4 {
+  margin-top: 40px;
+}
+
+.Profile__Money {
+  display: grid;
+  margin-left: 490px;
+  margin-top: -340px;
+
+  a {
+    margin-top: 62px;
+  }
+}
+
+.Profile__Button {
+  display: grid;
+  margin-left: 660px;
+  margin-top: -320px;
+
+  button {
+    margin-top: 50px;
+    width: 100px;
+    height: 30px;
+    border-radius: 12px;
+    background-color: #324c4f;
+    border: 1px solid transparent;
+  }
+}
+
+.Most__Ordered {
+  background-color: #1f1d2b;
+  margin-top: -800px;
+  margin-left: 900px;
+  border-radius: 10px;
+  height: 410px;
+  width: 550px;
+
+  h1 {
+    padding: 40px;
+    font-weight: 500;
+    font-size: 24px;
+  }
+}
+
+.Neewhr::after {
+  content: "";
+  display: block;
+  height: 1px;
+  border-radius: 2px;
+  background-color: #393c49;
+  width: 550px;
+}
+
+.Food {
+  margin-left: 30px;
+  margin-top: 10px;
+  img {
+    margin-top: 10px;
+    height: 50px;
+    width: 50px;
+  }
+}
+
+.Food__img--Name {
+  margin-left: 100px;
+  margin-top: -220px;
+
+  p {
+    margin-top: 40px;
+    color: white;
+  }
+
+  h6 {
+    font-weight: 500;
+    color: #abbbc2;
+  }
+}
+
+.MostType__ofOrder {
+  background-color: #1f1d2b;
+  margin-top: 20px;
+  margin-left: 900px;
+  border-radius: 10px;
+  height: 325px;
+  width: 550px;
+
+  h1 {
+    padding: 27px;
+    font-weight: 500;
+    font-size: 24px;
+  }
+
+  h4 {
+    margin-left: 310px;
+    margin-top: -20px;
+    font-weight: 400;
+  }
+}
+
+.Circle {
+  width: 180px;
+  height: 180px;
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+.color1 {
+  background-color: #ff7ca3;
+  height: 20px;
+  width: 20px;
+  margin-left: 280px;
+  margin-top: -170px;
+  border-radius: 24px;
+}
+.color2 {
+  background-color: #ffb572;
+  height: 20px;
+  width: 20px;
+  margin-left: 280px;
+  margin-top: 40px;
+  border-radius: 24px;
+}
+
+.color3 {
+  background-color: #65b0f6;
+  height: 20px;
+  width: 20px;
+  margin-left: 280px;
+  margin-top: 50px;
+  border-radius: 24px;
+}
