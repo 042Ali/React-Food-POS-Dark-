@@ -19,8 +19,9 @@ export default function MenuButton() {
       <div>
         <div style={{ display: "flex" }}>
           <Button
+            className="Btn__Payment"
             style={{
-              marginTop: "550px",
+              // marginTop: "550px",
               width: "390px",
               marginLeft: "60px",
               backgroundColor: "#ea7c69",

@@ -4,6 +4,7 @@ import MostOrdered from "./Cardlar/MostOrdered";
 import MostTypeofOrder from "./Cardlar/MostTypeofOrder";
 import { IoMdArrowDown } from "react-icons/io";
 import "./Dashboard.css";
+import "./DashboardAnimatino.css";
 
 export default function Dashboard() {
   return (

@@ -9,7 +9,7 @@
   padding: 24px 84px;
   border: 1px solid #1f1d2b;
   background-color: #1f1d2b;
-  height: 650px;
+  height: 700px;
   width: 300px;
   margin-left: 50px;
   margin-top: 10px;
@@ -19,3 +19,384 @@
 p {
   color: #abbbc2;
 }
+
+.Products__Management {
+  background-color: #1f1d2b;
+  height: 760px;
+  width: 1100px;
+  margin-left: 400px;
+  margin-top: -750px;
+  border-radius: 12px;
+
+  h1 {
+    font-size: 24px;
+    padding: 50px;
+  }
+}
+
+.Filter__Setting {
+  display: flex;
+  gap: 12px;
+  border: 1px solid #393c49;
+  width: 200px;
+  height: 50px;
+  justify-content: center;
+  padding-top: 10px;
+  border-radius: 12px;
+
+  h2 {
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+
+.Filter__Setting__card {
+  margin-left: 840px;
+  margin-top: -90px;
+}
+
+.Avatar_Image {
+  margin-top: -90px;
+  padding-left: 10px;
+  margin-top: 20px;
+
+  h3 {
+    display: flex;
+  }
+}
+
+.Hot__Dishes {
+  display: flex;
+  gap: 70px;
+  margin-top: 36px;
+  margin-left: 10px;
+}
+
+.Newhr3::after {
+  content: "";
+  display: block;
+  width: 770px;
+  height: 1px;
+  margin-top: 20px;
+  border-radius: 2px;
+  background-color: #393c49;
+}
+
+.Newhr4::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 1px;
+  margin-top: -1px;
+  margin-left: 20px;
+  border-radius: 2px;
+  background-color: #d87261;
+}
+
+.add-dish-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  margin-top: 30px;
+  margin-left: 30px;
+  height: 250px;
+  border: 2px dashed #ff6b6b;
+  color: #ff6b6b;
+  background-color: #1f1d2b;
+
+  cursor: pointer;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.add-dish-card .plus-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.card {
+  background-color: #1f1f2e;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  height: 270px;
+  padding: 20px;
+  margin-left: 30px;
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+}
+
+.card__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 3fr);
+}
+
+.image img {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+
+.content h3 {
+  font-size: 16px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.content .price {
+  font-size: 14px;
+  color: #b0b0b0;
+}
+
+.edit-button {
+  background-color: #5a2d24;
+  color: #f1f1f1;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.edit-button:hover {
+  background-color: #7a3f34;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.settings-main {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.settings-section h2,
+.settings-section p {
+  animation: fadeIn 0.1s ease-out;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.add-dish-card {
+  animation: bounce 2s infinite;
+}
+
+.Hot__Dishes li {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: slideIn 0.5s forwards;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.edit-button {
+  transition: box-shadow 0.3s ease;
+}
+
+.edit-button:hover {
+  box-shadow: 0px 0px 10px rgba(216, 114, 97, 0.6);
+}
+
+.settings-section h2,
+.settings-section p {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.settings-section h2:nth-child(1),
+.settings-section p:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.settings-section h2:nth-child(3),
+.settings-section p:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.settings-section h2:nth-child(5),
+.settings-section p:nth-child(5) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 5px rgba(216, 114, 97, 0.5);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(216, 114, 97, 0.7);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 5px rgba(216, 114, 97, 0.5);
+  }
+}
+
+.image img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+}
+
+.add-dish-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.add-dish-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-20deg);
+  transition: left 0.5s ease;
+}
+
+.add-dish-card:hover::after {
+  left: 100%;
+}
+
+.plus-icon {
+  transition: transform 0.3s ease;
+}
+
+.add-dish-card:hover .plus-icon {
+  transform: rotate(45deg);
+}
+
+.Hot__Dishes li {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: slideInLeft 0.5s forwards;
+  animation-delay: calc(0.1s * var(--i)); /* Stagger delay */
+}
+
+.Hot__Dishes li:nth-child(1) {
+  --i: 1;
+}
+.Hot__Dishes li:nth-child(2) {
+  --i: 2;
+}
+.Hot__Dishes li:nth-child(3) {
+  --i: 3;
+}
+.Hot__Dishes li:nth-child(4) {
+  --i: 4;
+}
+.Hot__Dishes li:nth-child(5) {
+  --i: 5;
+}
+.Hot__Dishes li:nth-child(6) {
+  --i: 6;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.Hot__Dishes li {
+  transition: transform 0.4s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.Hot__Dishes li:hover {
+  transform: scale(1.1) rotate(5deg);
+  color: #d87261; /
+}
+
+.Filter__Setting__card {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: zoomInFade 0.5s ease forwards;
+}
+
+@keyframes zoomInFade {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.Filter__Setting h2 {
+  position: relative;
+  overflow: hidden;
+}
+
+.Filter__Setting img {
+  transition: transform 0.4s ease;
+}
+
+.Filter__Setting__card:hover img {
+  transform: rotate(10deg) scale(1.05);
+}
+

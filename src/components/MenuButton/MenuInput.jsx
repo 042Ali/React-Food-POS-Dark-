@@ -3,6 +3,8 @@ import "./MenuButton.css";
 import { MdVisibility, MdVisibilityOff } from "react-icons/md";
 import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
+import { Toaster, toast } from "react-hot-toast";
+
 import {
   Button,
   FilledInput,
@@ -24,8 +26,22 @@ export default function MenuInput() {
     event.preventDefault();
   };
 
+  // Function to handle the Cancel button click
+  const handleCancel = () => {
+    toast("Redirecting to the main page..."); // Show a toast message
+    setTimeout(() => {
+      window.location.href = "/"; // Redirects the user to the home page
+    }, 1500); // Waits 1.5 seconds before redirecting
+  };
+
+  // Function to handle the Confirm Payment button click
+  const handleConfirmPayment = () => {
+    toast.success("Order has been successfully accepted!"); // Shows a success toast
+  };
+
   return (
     <>
+      <Toaster /> {/* This will display toast notifications */}
       <div style={{ marginTop: "-10px" }}>
         <div className="Cardholder__Name">
           <h1>Cardholder Name</h1>
@@ -127,6 +143,7 @@ export default function MenuInput() {
             border: "1px solid #ea7c69",
           }}
           variant="outlined"
+          onClick={handleCancel} // Shows toast and redirects after 1.5 seconds
         >
           Cancel
         </Button>
@@ -135,12 +152,13 @@ export default function MenuInput() {
             marginTop: "100px",
             width: "200px",
             height: "48px",
-            color: "#ffff",
-            backgroundColor: " #ea7c69",
+            color: "#fff",
+            backgroundColor: "#ea7c69",
             border: "1px solid #ea7c69",
             marginLeft: "30px",
           }}
           variant="outlined"
+          onClick={handleConfirmPayment} // Shows a success toast
         >
           Confirm Payment
         </Button>

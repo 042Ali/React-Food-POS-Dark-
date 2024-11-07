@@ -11,10 +11,12 @@ export default function Sidebar({ page, setPage }) {
         className={`sidebar-icon ${page === "Menu" ? "active" : ""}`}
         onClick={() => setPage("Menu")}
       >
-        
         <FiHome />
       </div>
-      <div className="sidebar-icon">
+      <div
+        className={`sidebar-icon ${page === "Discount" ? "active" : ""}`}
+        onClick={() => setPage("Discount")}
+      >
         <img src="./Discount.png" />
       </div>
       <div
@@ -23,7 +25,10 @@ export default function Sidebar({ page, setPage }) {
       >
         <img src="./Graph.png" />
       </div>
-      <div className="sidebar-icon">
+      <div
+        className={`sidebar-icon ${page === "MessegPage" ? "active" : ""}`}
+        onClick={() => setPage("MessegPage")}
+      >
         <img src="./Message.png" />
       </div>
       <div className="sidebar-icon">

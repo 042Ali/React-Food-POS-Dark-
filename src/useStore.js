@@ -2,6 +2,7 @@ import { create } from "zustand";
 
 export const useStore = create((set) => ({
   selectedProducts: [],
+
   addProduct: (product) =>
     set((state) => {
       const existingProduct = state.selectedProducts.find(
@@ -22,5 +23,14 @@ export const useStore = create((set) => ({
         };
       }
     }),
+
+  // New removeProduct method to delete a product
+  removeProduct: (productId) =>
+    set((state) => ({
+      selectedProducts: state.selectedProducts.filter(
+        (product) => product.id !== productId
+      ),
+    })),
+
   clearCart: () => set({ selectedProducts: [] }),
 }));

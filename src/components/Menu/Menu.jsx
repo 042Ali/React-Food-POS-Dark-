@@ -10,6 +10,7 @@ export default function Menu() {
   const [page, setPage] = useState(1);
   const [products, setProducts] = useState([]);
   const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   const addProduct = useStore((state) => state.addProduct);
 
@@ -18,9 +19,11 @@ export default function Menu() {
       .get("http://localhost:3000/products")
       .then((response) => {
         setProducts(response.data);
+        setIsLoading(false);
       })
       .catch((err) => {
         setError("Məlumat yüklənərkən xəta baş verdi.");
+        setIsLoading(false);
       });
   }, []);
 
@@ -52,19 +55,25 @@ export default function Menu() {
         <hr />
         <h2>Choose Dishes</h2>
 
-        <div className="product__grid">
-          {products.map((product) => (
-            <div
-              className="product"
-              key={product.id}
-              onClick={() => addProduct(product)}
-            >
-              <img className="product__img" src={product.image} alt="" />
-              <h3 className="product__h3">{product.name}</h3>
-              <p style={{ marginTop: "5px" }}>${product.price}</p>
-            </div>
-          ))}
-        </div>
+        {isLoading ? (
+          <div className="loading-animation">Yüklənir...</div>
+        ) : error ? (
+          <p className="error">{error}</p>
+        ) : (
+          <div className="product__grid">
+            {products.map((product) => (
+              <div
+                className="product"
+                key={product.id}
+                onClick={() => addProduct(product)}
+              >
+                <img className="product__img" src={product.image} alt="" />
+                <h3 className="product__h3">{product.name}</h3>
+                <p style={{ marginTop: "5px" }}>${product.price}</p>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
       <MenuPayment />
     </>

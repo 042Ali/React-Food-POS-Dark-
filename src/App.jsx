@@ -3,6 +3,8 @@ import Menu from "./components/Menu/Menu";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Settings from "./components/SettingsPages/Settings";
 import Dashboard from "./components/DashboardPages/Dashboard";
+import MessegPage from "./components/MessegPage/MessegPage";
+import Discount from "./components/DiscountPage/Discount";
 
 export default function App() {
   const [page, setPage] = useState("Menu");
@@ -16,6 +18,10 @@ export default function App() {
         <Settings />
       ) : page === "Dashboard" ? (
         <Dashboard />
+      ) : page === "MessegPage" ? (
+        <MessegPage />
+      ) : page === "Discount" ? (
+        <Discount />
       ) : (
         "Something went wrong"
       )}

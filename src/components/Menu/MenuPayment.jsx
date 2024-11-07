@@ -4,7 +4,9 @@ import { useStore } from "../../useStore";
 
 export default function MenuPayment() {
   const selectedProducts = useStore((state) => state.selectedProducts);
+  const removeProduct = useStore((state) => state.removeProduct); // Get the removeProduct function from the store
 
+  // Calculate total price
   let total = 0;
   for (let i = 0; i < selectedProducts.length; i++) {
     total += selectedProducts[i].price * selectedProducts[i].quantity;
@@ -61,7 +63,6 @@ export default function MenuPayment() {
         </div>
         {selectedProducts.length > 0 && (
           <div className="MenuPayment__Container">
-            <h2>Your Order</h2>
             <div className="MenuPayment__Items">
               {selectedProducts.map((product) => (
                 <div key={product.id} className="MenuPayment__Item">
@@ -70,18 +71,30 @@ export default function MenuPayment() {
                     alt={product.name}
                     className="MenuPayment__Img"
                   />
-                  <div>
-                    <p>{product.name}</p>
+                  <div className="MenuPayment__Price">
+                    <p style={{ marginTop: "-60px" }}>{product.name}</p>
                     <p>Quantity: {product.quantity}</p>
                     <p>${product.price * product.quantity}</p>
+                    {/* Delete button */}
+                    <Button
+                      onClick={() => removeProduct(product.id)} // Call removeProduct when clicked
+                      style={{
+                        color: "#ea7c69",
+                        border: "1px solid #ea7c69",
+                        borderRadius: "12px",
+                        marginTop: "10px",
+                        padding: "5px 10px",
+                      }}
+                      variant="outlined"
+                    >
+                      Delete
+                    </Button>
                   </div>
                 </div>
               ))}
             </div>
-            <hr />
-            <h3>Total: ${total}</h3>
+            <h3 style={{ marginTop: "10px" }}>Total: ${total}</h3>
           </div>
-          // TODO
         )}
         <MenuButton />
       </div>
