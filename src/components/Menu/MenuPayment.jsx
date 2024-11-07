@@ -92,9 +92,9 @@ export default function MenuPayment() {
               ))}
             </div>
             <h3 style={{ marginTop: "10px" }}>Total: ${total}</h3>
+            <MenuButton />
           </div>
         )}
-        <MenuButton />
       </div>
     </>
   );

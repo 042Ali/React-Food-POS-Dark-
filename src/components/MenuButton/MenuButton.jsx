@@ -21,7 +21,7 @@ export default function MenuButton() {
           <Button
             className="Btn__Payment"
             style={{
-              // marginTop: "550px",
+              marginTop: "15px",
               width: "390px",
               marginLeft: "60px",
               backgroundColor: "#ea7c69",
