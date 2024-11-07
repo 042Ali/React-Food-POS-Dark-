@@ -6,7 +6,6 @@ export default function MenuPayment() {
   const selectedProducts = useStore((state) => state.selectedProducts);
   const removeProduct = useStore((state) => state.removeProduct); // Get the removeProduct function from the store
 
-  // Calculate total price
   let total = 0;
   for (let i = 0; i < selectedProducts.length; i++) {
     total += selectedProducts[i].price * selectedProducts[i].quantity;
@@ -75,9 +74,8 @@ export default function MenuPayment() {
                     <p style={{ marginTop: "-60px" }}>{product.name}</p>
                     <p>Quantity: {product.quantity}</p>
                     <p>${product.price * product.quantity}</p>
-                    {/* Delete button */}
                     <Button
-                      onClick={() => removeProduct(product.id)} // Call removeProduct when clicked
+                      onClick={() => removeProduct(product.id)}
                       style={{
                         color: "#ea7c69",
                         border: "1px solid #ea7c69",

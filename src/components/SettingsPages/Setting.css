@@ -327,7 +327,7 @@ p {
   opacity: 0;
   transform: translateX(-20px);
   animation: slideInLeft 0.5s forwards;
-  animation-delay: calc(0.1s * var(--i)); /* Stagger delay */
+  animation-delay: calc(0.1s * var(--i)); 
 }
 
 .Hot__Dishes li:nth-child(1) {

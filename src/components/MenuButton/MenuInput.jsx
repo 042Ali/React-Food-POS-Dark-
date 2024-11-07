@@ -26,22 +26,20 @@ export default function MenuInput() {
     event.preventDefault();
   };
 
-  // Function to handle the Cancel button click
   const handleCancel = () => {
-    toast("Redirecting to the main page..."); // Show a toast message
+    toast("Redirecting to the main page...");
     setTimeout(() => {
-      window.location.href = "/"; // Redirects the user to the home page
-    }, 1500); // Waits 1.5 seconds before redirecting
+      window.location.href = "/";
+    }, 1500);
   };
 
-  // Function to handle the Confirm Payment button click
   const handleConfirmPayment = () => {
-    toast.success("Order has been successfully accepted!"); // Shows a success toast
+    toast.success("Order has been successfully accepted!");
   };
 
   return (
     <>
-      <Toaster /> {/* This will display toast notifications */}
+      <Toaster />
       <div style={{ marginTop: "-10px" }}>
         <div className="Cardholder__Name">
           <h1>Cardholder Name</h1>
@@ -143,7 +141,7 @@ export default function MenuInput() {
             border: "1px solid #ea7c69",
           }}
           variant="outlined"
-          onClick={handleCancel} // Shows toast and redirects after 1.5 seconds
+          onClick={handleCancel}
         >
           Cancel
         </Button>
@@ -158,7 +156,7 @@ export default function MenuInput() {
             marginLeft: "30px",
           }}
           variant="outlined"
-          onClick={handleConfirmPayment} // Shows a success toast
+          onClick={handleConfirmPayment}
         >
           Confirm Payment
         </Button>
