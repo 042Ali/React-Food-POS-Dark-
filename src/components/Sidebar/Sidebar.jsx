@@ -31,7 +31,10 @@ export default function Sidebar({ page, setPage }) {
       >
         <img src="./Message.png" />
       </div>
-      <div className="sidebar-icon">
+      <div
+        className={`sidebar-icon ${page === "Notification" ? "active" : ""}`}
+        onClick={() => setPage("Notification")}
+      >
         <img src="./Notification.png" />
       </div>
       <div

@@ -1,0 +1,28 @@
+.Notification {
+  background-color: #252836;
+  width: 1700px;
+  height: 890px;
+}
+
+.loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 350px;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.spinner {
+  animation: spin 1s infinite linear;
+  margin-right: 10px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

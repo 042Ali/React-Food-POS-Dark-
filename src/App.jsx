@@ -5,6 +5,7 @@ import Settings from "./components/SettingsPages/Settings";
 import Dashboard from "./components/DashboardPages/Dashboard";
 import MessegPage from "./components/MessegPage/MessegPage";
 import Discount from "./components/DiscountPage/Discount";
+import Notification from "./components/Notification/Notification";
 
 export default function App() {
   const [page, setPage] = useState("Menu");
@@ -22,6 +23,8 @@ export default function App() {
         <MessegPage />
       ) : page === "Discount" ? (
         <Discount />
+      ) : page === "Notification" ? (
+        <Notification />
       ) : (
         "Something went wrong"
       )}
