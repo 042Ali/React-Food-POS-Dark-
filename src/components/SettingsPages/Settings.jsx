@@ -1,6 +1,7 @@
 import ProductsManagement from "./Cardlar/ProductsManagement";
 import SettingSection from "./Cardlar/SettingSection";
 import "./Setting.css";
+import "./animate.css";
 
 export default function Setting() {
   return (
