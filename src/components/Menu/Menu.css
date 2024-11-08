@@ -68,7 +68,6 @@
   background-color: #1f1d2b;
   width: 530px;
   height: 890px;
-  overflow-y: scroll;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
@@ -196,4 +195,13 @@
 
 .loading-animation {
   animation: fadeIn 1s infinite;
+}
+
+.MenuPayment__Items {
+  overflow-y: scroll;
+  height: 500px;
+}
+
+.MenuPayment__Items::-webkit-scrollbar {
+  display: none;
 }

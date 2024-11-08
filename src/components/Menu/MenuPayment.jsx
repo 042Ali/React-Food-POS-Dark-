@@ -73,7 +73,7 @@ export default function MenuPayment() {
                   <div className="MenuPayment__Price">
                     <p style={{ marginTop: "-60px" }}>{product.name}</p>
                     <p>Quantity: {product.quantity}</p>
-                    <p>${product.price * product.quantity}</p>
+                    <p>${(product.price * product.quantity).toFixed(2)}</p>
                     <Button
                       onClick={() => removeProduct(product.id)}
                       style={{
@@ -91,7 +91,7 @@ export default function MenuPayment() {
                 </div>
               ))}
             </div>
-            <h3 style={{ marginTop: "10px" }}>Total: ${total}</h3>
+            <h3 style={{ marginTop: "10px" }}>Total: ${total.toFixed(2)}</h3>
             <MenuButton />
           </div>
         )}

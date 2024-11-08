@@ -11,7 +11,13 @@ export const useStore = create((set) => ({
       if (existingProduct) {
         return {
           selectedProducts: state.selectedProducts.map((p) =>
-            p.id === product.id ? { ...p, quantity: p.quantity + 1 } : p
+            p.id === product.id
+              ? {
+                  ...p,
+                  quantity: p.quantity + 1,
+                  price: product.price.toFixed(2),
+                }
+              : p
           ),
         };
       } else {
